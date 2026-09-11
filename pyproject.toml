@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qwcert"
+version = "0.1.0"
+description = "Reference implementation for target-dependent hitting-time certification"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0",
+  "scipy>=1.14",
+  "pandas>=2.2",
+  "networkx>=3.3",
+  "matplotlib>=3.9"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

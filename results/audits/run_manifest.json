@@ -1,0 +1,83 @@
+{
+  "elapsed_seconds": 25.427191495895386,
+  "environment": {
+    "matplotlib": "3.10.8",
+    "networkx": "3.6.1",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "scipy": "1.17.0"
+  },
+  "profile": {
+    "bad_proposal_noise": [
+      0.0,
+      1e-08,
+      1e-06,
+      0.0001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "cg_maxiter": 200,
+    "cubic_core_sizes": [
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024
+    ],
+    "cubic_seeds": [
+      0,
+      1,
+      2
+    ],
+    "deterministic_families": [
+      "path",
+      "cycle",
+      "grid",
+      "barbell",
+      "lollipop"
+    ],
+    "families": [
+      "path",
+      "cycle",
+      "grid",
+      "barbell",
+      "lollipop",
+      "random_regular",
+      "block_model"
+    ],
+    "fixed_proposal_iterations": 8,
+    "mark_policies": [
+      "first",
+      "last",
+      "highest_degree",
+      "lowest_degree",
+      "seeded_random"
+    ],
+    "master_seed": 20260911,
+    "multi_forest_jitter": 0.15,
+    "multi_forest_repeats": 8,
+    "profile_name": "paper_v1",
+    "provenance_note": "Configuration used to generate the numerical results reported in the current manuscript. All experimental settings are declared explicitly in this file.",
+    "random_graph_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "relative_width_tolerance": 0.05,
+    "sizes": [
+      32,
+      64,
+      128,
+      256,
+      512
+    ]
+  },
+  "run_id": "56996a074d08ac876a64"
+}

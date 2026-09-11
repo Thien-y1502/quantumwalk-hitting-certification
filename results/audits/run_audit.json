@@ -1,0 +1,19 @@
+{
+  "bad_proposal_all_contain": true,
+  "benchmark_evaluations": 375,
+  "certificate_runs": 1875,
+  "environment": {
+    "matplotlib": "3.10.8",
+    "networkx": "3.6.1",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "scipy": "1.17.0"
+  },
+  "max_linear_residual_cubic": 1.8294979870250812e-11,
+  "multi_improves_over_rooted_count": 216,
+  "multi_improves_over_rooted_fraction": 0.576,
+  "rooted_improves_count": 350,
+  "rooted_improves_fraction": 0.9333333333333333
+}

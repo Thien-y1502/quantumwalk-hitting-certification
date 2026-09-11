@@ -1,0 +1,19 @@
+{
+  "title": "QuantumWalk Hitting-Time Certification",
+  "description": "Reference implementation and reproducibility package for target-dependent hitting-time certification in reversible Markov chains with applications to quantum-walk search.",
+  "creators": [
+    {"name": "Nguyen Minh Tuan"},
+    {"name": "Bui Phi Hung"}
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "version": "0.1.0",
+  "keywords": [
+    "quantum walk",
+    "hitting time",
+    "Markov chain",
+    "effective resistance",
+    "reproducibility",
+    "verified numerical computation"
+  ]
+}

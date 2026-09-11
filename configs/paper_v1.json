@@ -1,0 +1,70 @@
+{
+  "profile_name": "paper_v1",
+  "master_seed": 20260911,
+  "families": [
+    "path",
+    "cycle",
+    "grid",
+    "barbell",
+    "lollipop",
+    "random_regular",
+    "block_model"
+  ],
+  "deterministic_families": [
+    "path",
+    "cycle",
+    "grid",
+    "barbell",
+    "lollipop"
+  ],
+  "sizes": [
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "random_graph_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "mark_policies": [
+    "first",
+    "last",
+    "highest_degree",
+    "lowest_degree",
+    "seeded_random"
+  ],
+  "relative_width_tolerance": 0.05,
+  "cg_maxiter": 200,
+  "multi_forest_repeats": 8,
+  "multi_forest_jitter": 0.15,
+  "fixed_proposal_iterations": 8,
+  "bad_proposal_noise": [
+    0.0,
+    1e-08,
+    1e-06,
+    0.0001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "cubic_core_sizes": [
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024
+  ],
+  "cubic_seeds": [
+    0,
+    1,
+    2
+  ],
+  "provenance_note": "Configuration used to generate the numerical results reported in the current manuscript. All experimental settings are declared explicitly in this file."
+}

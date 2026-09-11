@@ -1,0 +1,60 @@
+{'run_id': '56996a074d08ac876a64', 'profile': 'paper_v1'}
+[1/5] main benchmark
+  rows 1875
+[2/5] cubic study
+  rows 21
+[3/5] fixed-proposal ablation
+  rows 28
+[4/5] exact bad-proposal stress
+  rows 14
+[5/5] selected exact-rational cases
+  rows 6
+
+Aggregate summary:
+        floor_source  coverage  convergence  median_width  p90_width  median_floor_bound_looseness  p90_floor_bound_looseness  median_interval_looseness
+reference_dirichlet       1.0     0.933333      0.027644   0.048220                      1.015663                   1.665887                   1.026920
+    global_gap_mass       1.0     0.933333      0.026811   0.046067                      8.387157                 144.145938                   1.026612
+      marked_rooted       1.0     0.933333      0.030803   0.047054                      3.241366                   7.911999                   1.030587
+         hybrid_max       1.0     0.933333      0.030260   0.046992                      3.241366                   7.783229                   1.030212
+       multi_forest       1.0     0.933333      0.029527   0.047114                      2.895305                   5.387601                   1.029427
+
+Family summary:
+         family  global_gap_mass  marked_rooted  multi_forest  reference_dirichlet  paired_rooted_gain  paired_multi_gain_over_rooted
+       barbell       126.328142       1.999542      1.999542             1.885938           63.220771                       1.000000
+   block_model         5.380763       3.976166      3.214729             1.002488            1.384329                       1.152373
+         cycle        38.613480       1.511628      1.511628             1.206490           25.544302                       1.000000
+          grid        15.699876       7.066342      4.759572             1.030540            2.221783                       1.448307
+      lollipop       207.810655       7.850691      7.850691             5.468591           50.633989                       1.000000
+          path        76.907892       1.498534      1.498534             1.214667           51.473786                       1.000000
+random_regular         7.959317       3.269744      2.941785             1.011844            2.261618                       1.077358
+
+Cubic summary:
+    N       min    median       max
+  32  1.769818  1.838204  2.329204
+  52  2.816819  3.025570  3.756054
+  96  4.805192  4.870566  4.900344
+ 172  6.305084  7.535745  7.554996
+ 320 12.145382 12.193319 12.465616
+ 600 18.089601 18.472503 18.707831
+1152 28.531127 28.557562 28.626853
+
+Audit:
+ {
+  "bad_proposal_all_contain": true,
+  "benchmark_evaluations": 375,
+  "certificate_runs": 1875,
+  "environment": {
+    "matplotlib": "3.10.8",
+    "networkx": "3.6.1",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "scipy": "1.17.0"
+  },
+  "max_linear_residual_cubic": 1.8294979870250812e-11,
+  "multi_improves_over_rooted_count": 216,
+  "multi_improves_over_rooted_fraction": 0.576,
+  "rooted_improves_count": 350,
+  "rooted_improves_fraction": 0.9333333333333333
+}
