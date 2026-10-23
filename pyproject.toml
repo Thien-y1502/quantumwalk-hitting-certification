@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "qwcert"
-version = "0.1.0"
+version = "0.1.1"
 description = "Reference implementation for target-dependent hitting-time certification"
 requires-python = ">=3.11"
 dependencies = [

@@ -1,0 +1,47 @@
+name: Bug report
+description: Wrong result, crash, or platform-specific failure.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you expected, and what you observed instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. pip install -r requirements.txt
+        2. python reproduce_all.py
+    validations:
+      required: true
+  - type: dropdown
+    id: affects_results
+    attributes:
+      label: Could this change a number reported in the manuscript?
+      options: ["No", "Possibly", "Yes", "Not sure"]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: v0.1.0 or a commit hash
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: 'Output of: python -c "import platform,sys,numpy,scipy,networkx,pandas;print(platform.platform(),sys.version,numpy.__version__,scipy.__version__,networkx.__version__,pandas.__version__)"'
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or traceback
+      render: text
