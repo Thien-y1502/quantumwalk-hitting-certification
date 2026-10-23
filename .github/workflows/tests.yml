@@ -1,0 +1,43 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    name: pytest (${{ matrix.os }}, py${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run unit tests
+        run: pytest -q
+
+  checksums:
+    name: verify v0.1.0 MANIFEST.sha256
+    runs-on: ubuntu-latest
+    steps:
+      # The manifest describes the frozen v0.1.0 artifact, so verify it against that tag.
+      - uses: actions/checkout@v4
+        with:
+          ref: v0.1.0
+      - name: Verify release checksums
+        run: sha256sum -c MANIFEST.sha256

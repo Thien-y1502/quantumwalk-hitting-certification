@@ -1,0 +1,4 @@
+# Keep LF endings on every platform so MANIFEST.sha256 verifies after a Windows checkout.
+* text=auto eol=lf
+*.png binary
+*.pdf binary

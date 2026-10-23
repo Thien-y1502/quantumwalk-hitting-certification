@@ -1,0 +1,69 @@
+{
+  "reference": "v0.1.0",
+  "rtol": 1e-06,
+  "atol": 1e-08,
+  "residual_atol": 1e-06,
+  "all_match": true,
+  "files": [
+    {
+      "file": "results/raw/bad_proposal_exact.csv",
+      "match": true,
+      "max_rel_drift": 9.68064424528245e-16,
+      "note": "ok"
+    },
+    {
+      "file": "results/raw/benchmark_runs.csv",
+      "match": true,
+      "max_rel_drift": 2.4415029528197466e-07,
+      "note": "ok"
+    },
+    {
+      "file": "results/raw/cubic_runs.csv",
+      "match": true,
+      "max_rel_drift": 8.649179515676054e-14,
+      "note": "ok"
+    },
+    {
+      "file": "results/raw/fixed_proposal_ablation.csv",
+      "match": true,
+      "max_rel_drift": 5.362863788356716e-10,
+      "note": "ok"
+    },
+    {
+      "file": "results/tables/aggregate_certificate_summary.csv",
+      "match": true,
+      "max_rel_drift": 3.83145200584771e-09,
+      "note": "ok"
+    },
+    {
+      "file": "results/tables/cubic_summary.csv",
+      "match": true,
+      "max_rel_drift": 8.562837656852769e-14,
+      "note": "ok"
+    },
+    {
+      "file": "results/tables/exact_rational_cases.csv",
+      "match": true,
+      "max_rel_drift": 5.355788128393428e-14,
+      "note": "ok"
+    },
+    {
+      "file": "results/tables/family_certificate_summary.csv",
+      "match": true,
+      "max_rel_drift": 1.0566173798543316e-08,
+      "note": "ok"
+    },
+    {
+      "file": "results/tables/paired_evaluations.csv",
+      "match": true,
+      "max_rel_drift": 2.438812037263211e-07,
+      "note": "ok"
+    },
+    {
+      "file": "results/audits/run_audit.json",
+      "match": true,
+      "max_rel_drift": 0.0,
+      "note": "ok"
+    }
+  ]
+}

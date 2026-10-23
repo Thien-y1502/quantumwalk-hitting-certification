@@ -1,0 +1,37 @@
+name: reproduce
+
+# Full pipeline re-run. Manual or monthly, because it is slower than the unit tests.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 1 * *"
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - name: Run reproduce_all.py
+        run: |
+          set -o pipefail
+          python -u reproduce_all.py | tee reproduce_ci_stdout.txt
+      - name: Compare regenerated results with committed results
+        run: python scripts/compare_results.py --ref-git HEAD --json reproduce_ci_compare.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reproduction-${{ github.run_id }}
+          path: |
+            reproduce_ci_stdout.txt
+            reproduce_ci_compare.json
+            results/
